@@ -123,7 +123,7 @@ opts.Add(EnumVariable("bits", "Target platform bits", "64" if is64 else "32", ("
 opts.Add(BoolVariable("use_llvm", "Use the LLVM compiler - only effective when targeting Linux or FreeBSD", False))
 opts.Add(BoolVariable("use_mingw", "Use the MinGW compiler instead of MSVC - only effective on Windows", False))
 # Must be the same setting as used for cpp_bindings
-opts.Add(EnumVariable("target", "Compilation target", "debug", allowed_values=("debug", "release"), ignorecase=2))
+opts.Add(EnumVariable("target", "Compilation target", "release", allowed_values=("debug", "release"), ignorecase=2))
 opts.Add(
     PathVariable(
         "headers_dir",
