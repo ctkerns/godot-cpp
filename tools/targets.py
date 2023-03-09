@@ -58,7 +58,7 @@ def generate(env):
     if env.get("is_msvc", False):
         if env["debug_symbols"]:
             env.Append(CCFLAGS=["/Zi", "/FS"])
-            env.Append(LINKFLAGS=["/DEBUG:FULL", "/PROFILE"])
+            env.Append(LINKFLAGS=["/DEBUG:FULL"])
 
         if env["optimize"] == "speed" or env["optimize"] == "speed_trace":
             env.Append(CCFLAGS=["/O2"])
